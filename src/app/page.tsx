@@ -197,12 +197,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-black border-t border-gray-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-4 mb-8">
+          <div className="flex items-center justify-center mb-8">
             <Image 
               src="/logo.jpg" 
               alt="Caparica Performance" 
-              width={60} 
-              height={60} 
+              width={80} 
+              height={80} 
               className="object-contain"
             />
           </div>
