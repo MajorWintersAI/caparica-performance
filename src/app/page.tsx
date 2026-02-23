@@ -96,15 +96,24 @@ export default function Home() {
             ].map((service, idx) => (
               <div key={idx} className="group">
                 <div className="relative overflow-hidden mb-8 bg-gray-800 h-64 rounded-lg">
-                  {/* Placeholder for clean work photos - iPhone commercial style */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-red-500 rounded opacity-60"></div>
+                  {/* Real professional photos */}
+                  {(service.image === "/rpg-treatment.jpg" || service.image === "/nutrition.jpg") ? (
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                          <div className="w-8 h-8 bg-red-500 rounded opacity-60"></div>
+                        </div>
+                        <p className="text-gray-400 text-sm">Professional Photo</p>
                       </div>
-                      <p className="text-gray-400 text-sm">Professional Photo</p>
                     </div>
-                  </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                   <div className="absolute bottom-6 left-6 z-20">
                     <h5 className="text-sm font-medium tracking-widest text-red-400 mb-2">{service.subtitle.toUpperCase()}</h5>
