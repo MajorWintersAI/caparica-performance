@@ -96,24 +96,13 @@ export default function Home() {
             ].map((service, idx) => (
               <div key={idx} className="group">
                 <div className="relative overflow-hidden mb-8 bg-gray-800 h-64 rounded-lg">
-                  {/* Real professional photos */}
-                  {(service.image === "/rpg-treatment.jpg" || service.image === "/nutrition.jpg") ? (
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-red-500 rounded opacity-60"></div>
-                        </div>
-                        <p className="text-gray-400 text-sm">Professional Photo</p>
-                      </div>
-                    </div>
-                  )}
+                  {/* Real professional photos - all services now have photos */}
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                   <div className="absolute bottom-6 left-6 z-20">
                     <h5 className="text-sm font-medium tracking-widest text-red-400 mb-2">{service.subtitle.toUpperCase()}</h5>
@@ -203,21 +192,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black border-t border-gray-800 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center mb-8">
+      {/* Clean Footer - NO PHONE MOCKUP ANYWHERE */}
+      <footer className="bg-black border-t border-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* ONLY THE LOGO - NO OTHER IMAGES */}
+          <div className="mb-12">
             <Image 
               src="/logo.jpg" 
               alt="Caparica Performance" 
-              width={80} 
-              height={80} 
-              className="object-contain"
+              width={120} 
+              height={120} 
+              className="mx-auto object-contain"
             />
           </div>
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-500 text-sm font-light tracking-wide">© 2026 Caparica Performance. All rights reserved.</p>
-            <p className="text-gray-600 mt-2 text-sm">Lead Physiotherapist: Inês Dias</p>
+          
+          {/* Copyright text only */}
+          <div className="border-t border-gray-800 pt-8 space-y-2">
+            <p className="text-gray-500 text-sm font-light">© 2026 Caparica Performance. All rights reserved.</p>
+            <p className="text-gray-600 text-xs">Lead Physiotherapist: Inês Dias</p>
           </div>
         </div>
       </footer>
