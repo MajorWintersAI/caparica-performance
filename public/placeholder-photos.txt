@@ -1,0 +1,12 @@
+# Placeholder Photos Needed
+
+Replace these with clean, iPhone commercial-style work photos:
+
+1. /rpg-treatment.jpg - RPG session in progress, clean white background
+2. /physiotherapy.jpg - Hands-on physiotherapy treatment, professional setup  
+3. /functional-training.jpg - Functional training equipment/session, minimalist
+4. /nutrition.jpg - Clean nutrition consultation setup or healthy foods
+
+Style: Clean, minimalist, white/neutral backgrounds, professional lighting, similar to Apple product photography aesthetic.
+
+Current: Using CSS-generated placeholders with red accent dots.

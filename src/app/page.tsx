@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="bg-white text-black hover:bg-gray-200 px-6 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
+              className="bg-red-600 text-white hover:bg-red-700 px-6 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
             >
               Reserve Now
             </button>
@@ -40,7 +40,7 @@ export default function Home() {
               CAPARICA PERFORMANCE
             </h1>
             <h2 className="text-3xl md:text-4xl font-light mb-12 tracking-tight text-gray-400">
-              Fisioterapia & Performance
+              Fisioterapia & <span className="text-red-500">Performance</span>
             </h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed text-gray-300">
               Centro especializado em RPG, fisioterapia e treino funcional. 
@@ -48,7 +48,7 @@ export default function Home() {
             </p>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="bg-white text-black hover:bg-gray-200 px-12 py-4 font-medium tracking-wide transition-colors uppercase text-sm"
+              className="bg-red-600 text-white hover:bg-red-700 px-12 py-4 font-medium tracking-wide transition-colors uppercase text-sm"
             >
               Marcar Consulta
             </button>
@@ -73,32 +73,41 @@ export default function Home() {
                 title: "RPG",
                 subtitle: "Reeducação Postural Global",
                 description: "Método científico para correção postural e alívio de dores crônicas. Tratamento que aborda a causa raiz dos problemas posturais.",
-                image: "/api/placeholder/600/400"
+                image: "/rpg-treatment.jpg"
               },
               {
                 title: "FISIOTERAPIA",
                 subtitle: "Tratamento Personalizado",
                 description: "Protocolos individuais de tratamento focados na sua recuperação específica com técnicas avançadas.",
-                image: "/api/placeholder/600/400"
+                image: "/physiotherapy.jpg"
               },
               {
                 title: "TREINO FUNCIONAL",
                 subtitle: "Otimização de Performance", 
                 description: "Programas personalizados para otimizar performance física e condição atlética de forma segura.",
-                image: "/api/placeholder/600/400"
+                image: "/functional-training.jpg"
               },
               {
                 title: "NUTRIÇÃO",
                 subtitle: "Consultoria Nutricional",
                 description: "Orientação nutricional para complementar seus objetivos de treino e acelerar a recuperação.",
-                image: "/api/placeholder/600/400"
+                image: "/nutrition.jpg"
               }
             ].map((service, idx) => (
               <div key={idx} className="group">
-                <div className="relative overflow-hidden mb-8 bg-gray-800 h-64">
+                <div className="relative overflow-hidden mb-8 bg-gray-800 h-64 rounded-lg">
+                  {/* Placeholder for clean work photos - iPhone commercial style */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-red-500 rounded opacity-60"></div>
+                      </div>
+                      <p className="text-gray-400 text-sm">Professional Photo</p>
+                    </div>
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                   <div className="absolute bottom-6 left-6 z-20">
-                    <h5 className="text-sm font-medium tracking-widest text-gray-300 mb-2">{service.subtitle.toUpperCase()}</h5>
+                    <h5 className="text-sm font-medium tracking-widest text-red-400 mb-2">{service.subtitle.toUpperCase()}</h5>
                     <h4 className="text-2xl font-light tracking-tight">{service.title}</h4>
                   </div>
                 </div>
@@ -134,7 +143,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
+              className="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
             >
               Agendar Consulta
             </button>
@@ -169,11 +178,11 @@ export default function Home() {
               <div className="space-y-4 text-gray-300 font-light">
                 <div className="flex justify-between max-w-xs mx-auto">
                   <span>Segunda - Sexta</span>
-                  <span>07:00 - 21:00</span>
+                  <span className="text-red-400">07:00 - 21:00</span>
                 </div>
                 <div className="flex justify-between max-w-xs mx-auto">
                   <span>Sábado</span>
-                  <span>07:00 - 13:00</span>
+                  <span className="text-red-400">07:00 - 13:00</span>
                 </div>
                 <div className="flex justify-between max-w-xs mx-auto">
                   <span>Domingo</span>
