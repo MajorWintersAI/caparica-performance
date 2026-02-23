@@ -192,7 +192,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clean Footer - NO PHONE MOCKUP ANYWHERE */}
+      {/* Clean Footer - NO PHONE MOCKUP ANYWHERE - V3 */}
       <footer className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* ONLY THE LOGO - NO OTHER IMAGES */}
