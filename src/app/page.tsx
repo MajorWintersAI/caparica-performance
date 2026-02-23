@@ -36,21 +36,21 @@ export default function Home() {
       <section className="relative bg-black py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-7xl md:text-8xl font-light mb-8 tracking-tight">
-              IT'S NOT FITNESS.
+            <h1 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
+              CAPARICA PERFORMANCE
             </h1>
-            <h2 className="text-6xl md:text-7xl font-light mb-12 tracking-tight text-gray-400">
-              IT'S LIFE.
+            <h2 className="text-3xl md:text-4xl font-light mb-12 tracking-tight text-gray-400">
+              Fisioterapia & Performance
             </h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed text-gray-300">
-              Experience the intersection of luxury and performance. 
-              Where precision meets passion, and every session transforms.
+              Centro especializado em RPG, fisioterapia e treino funcional. 
+              Recupere, fortaleça e optimize o seu corpo com profissionais qualificados.
             </p>
             <button 
               onClick={() => setIsBookingOpen(true)}
               className="bg-white text-black hover:bg-gray-200 px-12 py-4 font-medium tracking-wide transition-colors uppercase text-sm"
             >
-              Begin Your Transformation
+              Marcar Consulta
             </button>
           </div>
         </div>
@@ -61,37 +61,36 @@ export default function Home() {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h3 className="text-5xl font-light mb-6 tracking-tight">ONE MEMBERSHIP.</h3>
-            <h4 className="text-4xl font-light mb-8 text-gray-400 tracking-tight">LIMITLESS POTENTIAL.</h4>
+            <h3 className="text-4xl font-light mb-8 tracking-tight">Nossos Serviços</h3>
             <p className="text-xl font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Precision-backed treatments, exclusive methodologies, and regenerative amenities designed to elevate your body and mind.
+              Tratamentos especializados e programas personalizados para otimizar sua performance e bem-estar.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-16">
             {[
               {
-                title: "RPG METHODOLOGY",
-                subtitle: "Global Postural Reeducation",
-                description: "Science-backed postural correction that addresses the root cause, not just symptoms. Transform chronic pain into lasting strength.",
+                title: "RPG",
+                subtitle: "Reeducação Postural Global",
+                description: "Método científico para correção postural e alívio de dores crônicas. Tratamento que aborda a causa raiz dos problemas posturais.",
                 image: "/api/placeholder/600/400"
               },
               {
-                title: "PRECISION THERAPY",
-                subtitle: "Personalized Recovery",
-                description: "Individual treatment protocols designed for your unique biomechanical blueprint. Where expertise meets innovation.",
+                title: "FISIOTERAPIA",
+                subtitle: "Tratamento Personalizado",
+                description: "Protocolos individuais de tratamento focados na sua recuperação específica com técnicas avançadas.",
                 image: "/api/placeholder/600/400"
               },
               {
-                title: "FUNCTIONAL TRAINING",
-                subtitle: "Performance Optimization", 
-                description: "Bespoke programs that don't just build muscle—they build resilience, power, and longevity.",
+                title: "TREINO FUNCIONAL",
+                subtitle: "Otimização de Performance", 
+                description: "Programas personalizados para otimizar performance física e condição atlética de forma segura.",
                 image: "/api/placeholder/600/400"
               },
               {
-                title: "WELLNESS INTEGRATION",
-                subtitle: "Holistic Nutrition",
-                description: "Nutritional strategies that fuel performance and accelerate recovery. Because greatness requires the right foundation.",
+                title: "NUTRIÇÃO",
+                subtitle: "Consultoria Nutricional",
+                description: "Orientação nutricional para complementar seus objetivos de treino e acelerar a recuperação.",
                 image: "/api/placeholder/600/400"
               }
             ].map((service, idx) => (
@@ -114,17 +113,17 @@ export default function Home() {
       <section className="py-24 bg-black border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h3 className="text-4xl font-light mb-8 tracking-tight">WHERE SCIENCE MEETS ART.</h3>
+            <h3 className="text-4xl font-light mb-8 tracking-tight">Condições Tratadas</h3>
             <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Our expertise spans the full spectrum of human movement and recovery. Every challenge is an opportunity for transformation.
+              Nossa experiência abrange um amplo espectro de condições relacionadas ao movimento e recuperação.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-1 max-w-5xl mx-auto">
             {[
-              "Scoliosis", "Spinal Curvature", "Postural Disorders",
-              "Chronic Pain", "Sciatica", "Disc Pathology", 
-              "Knee Alignment", "Foot Mechanics", "Tendinopathy", "Cervical Issues"
+              "Escoliose", "Hipercifose Dorsal", "Hiperlordose",
+              "Lombalgia", "Dor Ciática", "Hérnia Discal", 
+              "Joelhos Valgos", "Pé Plano/Cavo", "Tendinopatia", "Dor Cervical"
             ].map((condition, idx) => (
               <div key={idx} className="bg-gray-900 hover:bg-gray-800 border border-gray-700 p-6 text-center transition-colors group">
                 <span className="text-gray-300 font-light tracking-wide group-hover:text-white transition-colors">{condition}</span>
@@ -137,7 +136,7 @@ export default function Home() {
               onClick={() => setIsBookingOpen(true)}
               className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
             >
-              Discover Your Path
+              Agendar Consulta
             </button>
           </div>
         </div>
@@ -147,13 +146,13 @@ export default function Home() {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-light mb-8 tracking-tight">VISIT OUR SANCTUARY.</h3>
-            <p className="text-xl font-light text-gray-400">Where transformation begins and excellence never ends.</p>
+            <h3 className="text-4xl font-light mb-8 tracking-tight">Contacte-nos</h3>
+            <p className="text-xl font-light text-gray-400">Agende sua consulta e inicie sua jornada de recuperação.</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
             <div className="text-center">
-              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Location</h4>
+              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Localização</h4>
               <div className="space-y-3 text-gray-300 font-light">
                 <p className="text-lg">R. António Correia 2 A</p>
                 <p className="text-lg">2825-291 Costa da Caparica</p>
@@ -166,19 +165,19 @@ export default function Home() {
             </div>
             
             <div className="text-center">
-              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Hours</h4>
+              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Horários</h4>
               <div className="space-y-4 text-gray-300 font-light">
                 <div className="flex justify-between max-w-xs mx-auto">
-                  <span>Monday - Friday</span>
+                  <span>Segunda - Sexta</span>
                   <span>07:00 - 21:00</span>
                 </div>
                 <div className="flex justify-between max-w-xs mx-auto">
-                  <span>Saturday</span>
+                  <span>Sábado</span>
                   <span>07:00 - 13:00</span>
                 </div>
                 <div className="flex justify-between max-w-xs mx-auto">
-                  <span>Sunday</span>
-                  <span className="text-gray-500">Closed</span>
+                  <span>Domingo</span>
+                  <span className="text-gray-500">Encerrado</span>
                 </div>
               </div>
             </div>
