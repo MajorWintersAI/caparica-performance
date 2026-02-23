@@ -8,145 +8,177 @@ export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <header className="bg-black border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Image 
                 src="/logo.jpg" 
                 alt="Caparica Performance" 
-                width={60} 
-                height={60} 
-                className="rounded-full"
+                width={80} 
+                height={80} 
+                className="object-contain"
               />
-              <div>
-                <h1 className="text-2xl font-bold text-black">Caparica Performance</h1>
-                <p className="text-gray-600">Fisioterapia & Performance</p>
-              </div>
             </div>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="btn-primary"
+              className="bg-white text-black hover:bg-gray-200 px-6 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
             >
-              Marcar Consulta
+              Reserve Now
             </button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-black text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-black py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h2 className="text-5xl font-bold mb-6">
-              Transforme a Sua Performance
+            <h1 className="text-7xl md:text-8xl font-light mb-8 tracking-tight">
+              IT'S NOT FITNESS.
+            </h1>
+            <h2 className="text-6xl md:text-7xl font-light mb-12 tracking-tight text-gray-400">
+              IT'S LIFE.
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Centro especializado em RPG, fisioterapia e treino funcional. 
-              Recupere, fortaleça e optimize o seu corpo com profissionais qualificados.
+            <p className="text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed text-gray-300">
+              Experience the intersection of luxury and performance. 
+              Where precision meets passion, and every session transforms.
             </p>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-white text-black hover:bg-gray-200 px-12 py-4 font-medium tracking-wide transition-colors uppercase text-sm"
             >
-              Agendar Avaliação
+              Begin Your Transformation
+            </button>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-24 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h3 className="text-5xl font-light mb-6 tracking-tight">ONE MEMBERSHIP.</h3>
+            <h4 className="text-4xl font-light mb-8 text-gray-400 tracking-tight">LIMITLESS POTENTIAL.</h4>
+            <p className="text-xl font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Precision-backed treatments, exclusive methodologies, and regenerative amenities designed to elevate your body and mind.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-16">
+            {[
+              {
+                title: "RPG METHODOLOGY",
+                subtitle: "Global Postural Reeducation",
+                description: "Science-backed postural correction that addresses the root cause, not just symptoms. Transform chronic pain into lasting strength.",
+                image: "/api/placeholder/600/400"
+              },
+              {
+                title: "PRECISION THERAPY",
+                subtitle: "Personalized Recovery",
+                description: "Individual treatment protocols designed for your unique biomechanical blueprint. Where expertise meets innovation.",
+                image: "/api/placeholder/600/400"
+              },
+              {
+                title: "FUNCTIONAL TRAINING",
+                subtitle: "Performance Optimization", 
+                description: "Bespoke programs that don't just build muscle—they build resilience, power, and longevity.",
+                image: "/api/placeholder/600/400"
+              },
+              {
+                title: "WELLNESS INTEGRATION",
+                subtitle: "Holistic Nutrition",
+                description: "Nutritional strategies that fuel performance and accelerate recovery. Because greatness requires the right foundation.",
+                image: "/api/placeholder/600/400"
+              }
+            ].map((service, idx) => (
+              <div key={idx} className="group">
+                <div className="relative overflow-hidden mb-8 bg-gray-800 h-64">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                  <div className="absolute bottom-6 left-6 z-20">
+                    <h5 className="text-sm font-medium tracking-widest text-gray-300 mb-2">{service.subtitle.toUpperCase()}</h5>
+                    <h4 className="text-2xl font-light tracking-tight">{service.title}</h4>
+                  </div>
+                </div>
+                <p className="text-gray-400 font-light leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialties Section */}
+      <section className="py-24 bg-black border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h3 className="text-4xl font-light mb-8 tracking-tight">WHERE SCIENCE MEETS ART.</h3>
+            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Our expertise spans the full spectrum of human movement and recovery. Every challenge is an opportunity for transformation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-1 max-w-5xl mx-auto">
+            {[
+              "Scoliosis", "Spinal Curvature", "Postural Disorders",
+              "Chronic Pain", "Sciatica", "Disc Pathology", 
+              "Knee Alignment", "Foot Mechanics", "Tendinopathy", "Cervical Issues"
+            ].map((condition, idx) => (
+              <div key={idx} className="bg-gray-900 hover:bg-gray-800 border border-gray-700 p-6 text-center transition-colors group">
+                <span className="text-gray-300 font-light tracking-wide group-hover:text-white transition-colors">{condition}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-16">
+            <button 
+              onClick={() => setIsBookingOpen(true)}
+              className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 font-medium tracking-wide transition-colors uppercase text-sm"
+            >
+              Discover Your Path
             </button>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-16 bg-gray-50">
+      {/* Location & Hours */}
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-center mb-12 text-black">Nossos Serviços</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "RPG - Reeducação Postural Global",
-                description: "Método científico para correção postural e alívio de dores crônicas",
-                icon: "🧘‍♀️"
-              },
-              {
-                title: "Fisioterapia Personalizada",
-                description: "Tratamento individual focado na sua recuperação específica",
-                icon: "🏥"
-              },
-              {
-                title: "Treino Funcional",
-                description: "Programas personalizados para otimizar performance e condição física",
-                icon: "💪"
-              },
-              {
-                title: "Avaliação Nutricional",
-                description: "Consultoria nutricional para complementar seus objetivos de treino",
-                icon: "🥗"
-              }
-            ].map((service, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-sm border">
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h4 className="text-xl font-semibold mb-3 text-black">{service.title}</h4>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-light mb-8 tracking-tight">VISIT OUR SANCTUARY.</h3>
+            <p className="text-xl font-light text-gray-400">Where transformation begins and excellence never ends.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Conditions We Treat */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-center mb-12 text-black">Condições Tratadas</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {[
-              "Escoliose", "Hipercifose Dorsal", "Hiperlordose Cervical e Lombar",
-              "Lombalgia", "Dor Ciática", "Hérnia Discal", "Joelhos Valgos",
-              "Pé Plano/Cavo", "Tendinopatia", "Dor Cervical"
-            ].map((condition, idx) => (
-              <div key={idx} className="bg-red-50 border border-red-200 p-4 rounded-lg text-center">
-                <span className="text-red-700 font-medium">{condition}</span>
+          
+          <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+            <div className="text-center">
+              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Location</h4>
+              <div className="space-y-3 text-gray-300 font-light">
+                <p className="text-lg">R. António Correia 2 A</p>
+                <p className="text-lg">2825-291 Costa da Caparica</p>
+                <p className="text-lg">Portugal</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact & Location */}
-      <section className="py-16 bg-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Contacte-nos</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-red-400">📍</span>
-                  <span>R. António Correia 2 A, 2825-291 Costa da Caparica</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-red-400">📞</span>
-                  <span>+351 934 614 334</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-red-400">✉️</span>
-                  <span>caparicaperformance@gmail.com</span>
-                </div>
+              <div className="mt-8 space-y-3">
+                <p className="text-gray-400">+351 934 614 334</p>
+                <p className="text-gray-400">caparicaperformance@gmail.com</p>
               </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Horários</h3>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Segunda - Sexta:</span>
-                  <span className="text-red-400">07:00 - 21:00</span>
+            
+            <div className="text-center">
+              <h4 className="text-sm font-medium tracking-widest text-gray-400 mb-6 uppercase">Hours</h4>
+              <div className="space-y-4 text-gray-300 font-light">
+                <div className="flex justify-between max-w-xs mx-auto">
+                  <span>Monday - Friday</span>
+                  <span>07:00 - 21:00</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Sábado:</span>
-                  <span className="text-red-400">07:00 - 13:00</span>
+                <div className="flex justify-between max-w-xs mx-auto">
+                  <span>Saturday</span>
+                  <span>07:00 - 13:00</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Domingo:</span>
-                  <span className="text-gray-400">Encerrado</span>
+                <div className="flex justify-between max-w-xs mx-auto">
+                  <span>Sunday</span>
+                  <span className="text-gray-500">Closed</span>
                 </div>
               </div>
             </div>
@@ -155,20 +187,21 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-red-600 text-white py-8">
+      <footer className="bg-black border-t border-gray-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-4 mb-4">
+          <div className="flex items-center justify-center space-x-4 mb-8">
             <Image 
               src="/logo.jpg" 
               alt="Caparica Performance" 
-              width={40} 
-              height={40} 
-              className="rounded-full"
+              width={60} 
+              height={60} 
+              className="object-contain"
             />
-            <span className="text-xl font-bold">Caparica Performance</span>
           </div>
-          <p className="text-red-100">© 2026 Caparica Performance. Todos os direitos reservados.</p>
-          <p className="text-red-200 mt-2">Fisioterapeuta: Inês Dias</p>
+          <div className="border-t border-gray-800 pt-8">
+            <p className="text-gray-500 text-sm font-light tracking-wide">© 2026 Caparica Performance. All rights reserved.</p>
+            <p className="text-gray-600 mt-2 text-sm">Lead Physiotherapist: Inês Dias</p>
+          </div>
         </div>
       </footer>
 
